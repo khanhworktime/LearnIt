@@ -21,7 +21,7 @@ router.post('/register', async (req, res) => {
         //Check if extinct username
         const user = await User.findOne({ username })
 
-        if (user) res.status(400).json({ success: false, message: 'Username already took!' })
+        if (user) return res.status(400).json({ success: false, message: 'Username already took!' })
         //All okay
 
         const hashedPassword = await argon2.hash(password);
@@ -31,10 +31,10 @@ router.post('/register', async (req, res) => {
 
         // Return token
         const accessToken = jwt.sign({ userId: newUser._id }, process.env.ACCESS_TOKEN_SECRET);
-        res.status(200).json({ success: true, message: 'User added successfully!', accessToken });
+        return res.status(200).json({ success: true, message: 'User added successfully!', accessToken });
     } catch (err) {
         console.log(err.message);
-        res.status(500).json({ success: false, message: 'Interval server error' })
+        return res.status(500).json({ success: false, message: 'Interval server error' })
     }
 })
 

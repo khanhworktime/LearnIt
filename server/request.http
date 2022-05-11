@@ -2,15 +2,35 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "chikhanh23",
+    "username": "chikhanhte",
     "password": "12345"
 }
 
+###
 
 POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "chikhanh23",
+    "username": "chikhanhte",
     "password": "12345"
 }
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdjMDk0NTZiMTVlMjBmNjYwYzM1MjEiLCJpYXQiOjE2NTIyOTYwMTV9.tUgvSdmEkzl-UNOcBFmya8JQQnLzhCyOte_KcDGUp40
+
+{
+    "title": "Testing new posts",
+    "description": "test",
+    "url": "google.com",
+    "status": "To learn"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdjMDk0NTZiMTVlMjBmNjYwYzM1MjEiLCJpYXQiOjE2NTIyOTYwMTV9.tUgvSdmEkzl-UNOcBFmya8JQQnLzhCyOte_KcDGUp40
