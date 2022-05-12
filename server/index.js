@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const authRouter = require('./routes/auth')
 const postRouter = require('./routes/post')
@@ -28,6 +29,7 @@ const app = express();
 
 // Fix the http request
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/auth', authRouter);
 app.use('/api/posts', postRouter);

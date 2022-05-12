@@ -23,10 +23,10 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdjMDk0NTZiMTVlMjBmNjYwYzM1MjEiLCJpYXQiOjE2NTIyOTYwMTV9.tUgvSdmEkzl-UNOcBFmya8JQQnLzhCyOte_KcDGUp40
 
 {
-    "title": "Testing new posts",
+    "title": "Num2",
     "description": "test",
     "url": "google.com",
-    "status": "To learn"
+    "status": "Learned"
 }
 
 ###
@@ -34,3 +34,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdjM
 GET http://localhost:5000/api/posts
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdjMDk0NTZiMTVlMjBmNjYwYzM1MjEiLCJpYXQiOjE2NTIyOTYwMTV9.tUgvSdmEkzl-UNOcBFmya8JQQnLzhCyOte_KcDGUp40
+
+###
+
+PUT http://localhost:5000/api/posts/627c7f3b65f29161f504bb4b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdjMDk0NTZiMTVlMjBmNjYwYzM1MjEiLCJpYXQiOjE2NTIzMjU0MDd9.YgMVsL2-fQ1N3NfimTqsX2k2GzZfUipLBiyGOujTSts
+
+{
+    "title": "Updated num 2",
+    "url": "https://youtube.com",
+    "status": "Lea"
+}
+
+###
+DELETE http://localhost:5000/api/posts/627c7f3b65f29161f504bb4b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdjMDk0NTZiMTVlMjBmNjYwYzM1MjEiLCJpYXQiOjE2NTIzMjYxNTV9.mKryyeaTmgeY6OUvxxN3vlEy0z6fjT8GpT4zU7f5Zis
